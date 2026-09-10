@@ -23,15 +23,7 @@ The project analyzes seasonal agricultural performance and identifies relationsh
 
 ## 📊 Dataset
 
-The dataset contains **4,000 farm-level records** and **28 features** covering:
-
-- Farm, state, district, crop, and season information
-- Rainfall, temperature, humidity, sunlight, soil pH, and soil moisture
-- Nitrogen, phosphorus, potassium, fertilizer, pesticide, and seed quality
-- Yield, production, market price, cost, revenue, and profit
-- Water usage, water-efficiency, and disease/pest risk
-
-The dataset is included in `data/` for reproducibility.
+The dataset contains **4,000 farm-level records** and **28 features** covering farm, environmental, input, production, financial, water-use, and disease/pest variables. The source dataset is included in `data/` for reproducibility.
 
 ## 🔬 Analysis Workflow
 
@@ -45,12 +37,11 @@ The dataset is included in `data/` for reproducibility.
 
 ## 💡 Key Findings
 
-- **Rabi** shows the strongest overall stability in yield and profitability distributions.
+- **Rabi** shows comparatively strong stability in yield and profitability distributions.
 - **Kharif** is associated with higher rainfall and warm conditions, supporting water-intensive crops while also increasing disease/pest pressure.
 - **Zaid** experiences greater heat and stronger dependence on irrigation, making efficient water management especially important.
 - **Drip irrigation** records the highest water-efficiency levels across seasons in the analysis.
 - **Flood irrigation** shows the weakest water efficiency.
-- The analysis indicates a practical sustainability trade-off between seasonal productivity, disease/pest risk, profitability, and water use.
 
 ## 🧰 Technologies Used
 
@@ -67,38 +58,22 @@ The dataset is included in `data/` for reproducibility.
 Seasonal-Agriculture-Performance-Analysis/
 ├── README.md
 ├── requirements.txt
+├── .gitignore
 ├── notebooks/
 │   └── Seasonal_Agriculture_Analysis.ipynb
-├── data/
-│   └── seasonal_agriculture_performance_dataset.csv
-└── outputs/
-    └── figures/
+└── data/
+    └── seasonal_agriculture_performance_dataset.csv
 ```
 
 ## ▶️ How to Run
 
-### 1. Clone the repository
-
 ```bash
 git clone https://github.com/Dreamer-26/Seasonal-Agriculture-Performance-Analysis.git
 cd Seasonal-Agriculture-Performance-Analysis
-```
-
-### 2. Install dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 3. Open the notebook
-
-Launch Jupyter Notebook or JupyterLab and open:
-
-```text
-notebooks/Seasonal_Agriculture_Analysis.ipynb
-```
-
-The notebook should load the dataset from the repository's `data/` folder after the relative dataset path is updated accordingly.
+Open `notebooks/Seasonal_Agriculture_Analysis.ipynb` in Jupyter Notebook or JupyterLab and run the cells in order.
 
 ## 📌 Project Status
 
@@ -109,7 +84,3 @@ Completed academic data-analysis project prepared for the **VOIS 2026–27** pro
 **Shivayogi Mruthunjaya Urolagin**  
 USN: **1DS23RI047**  
 Dayananda Sagar College Of Engineering
-
----
-
-⭐ This repository contains the notebook, source dataset, analysis workflow, and supporting project documentation.
