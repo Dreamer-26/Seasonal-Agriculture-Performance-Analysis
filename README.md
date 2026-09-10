@@ -1,6 +1,6 @@
 # 🌾 Seasonal Agriculture Performance Analysis
 
-A data analysis project that investigates how **Kharif, Rabi, and Zaid** agricultural seasons differ in yield, profitability, environmental conditions, water efficiency, and disease/pest risk.
+> A data-driven study of **Kharif, Rabi, and Zaid** agricultural seasons, focusing on yield, profitability, environmental conditions, water efficiency, and disease/pest risk.
 
 ## 👤 Project Information
 
@@ -13,17 +13,25 @@ A data analysis project that investigates how **Kharif, Rabi, and Zaid** agricul
 
 ## 🎯 Objective
 
-The project analyzes seasonal agricultural performance and identifies relationships among environmental conditions, irrigation practices, water utilization, crop yield, profitability, and disease/pest risk.
+This project analyzes seasonal agricultural performance and explores how environmental conditions, irrigation practices, resource usage, crop yield, profitability, and disease/pest risk vary across agricultural seasons.
 
 ### Analytical Questions
 
-1. Which agricultural season delivers the highest average yield and the most stable profit distribution?
+1. Which agricultural season delivers the highest average yield and profitability, and how stable are the profit distributions?
 2. How do rainfall and temperature vary across seasons, and how are these environmental differences reflected in yield outcomes?
 3. How does the interaction between irrigation method and season affect water efficiency and disease/pest risk?
 
 ## 📊 Dataset
 
-The dataset contains **4,000 farm-level records** and **28 features** covering farm, environmental, input, production, financial, water-use, and disease/pest variables. The source dataset is included in `data/` for reproducibility.
+The dataset contains **4,000 farm-level records** and **28 features** covering:
+
+- Farm, state, district, crop, and season information
+- Rainfall, temperature, humidity, sunlight, soil pH, and soil moisture
+- Nitrogen, phosphorus, potassium, fertilizer, pesticide, and seed quality
+- Yield, production, market price, cost, revenue, and profit
+- Water usage, water efficiency, and disease/pest risk
+
+The source dataset is included in `data/` for reproducibility. fileciteturn71file0L2-L6
 
 ## 🔬 Analysis Workflow
 
@@ -37,11 +45,14 @@ The dataset contains **4,000 farm-level records** and **28 features** covering f
 
 ## 💡 Key Findings
 
-- **Rabi** shows comparatively strong stability in yield and profitability distributions.
-- **Kharif** is associated with higher rainfall and warm conditions, supporting water-intensive crops while also increasing disease/pest pressure.
-- **Zaid** experiences greater heat and stronger dependence on irrigation, making efficient water management especially important.
-- **Drip irrigation** records the highest water-efficiency levels across seasons in the analysis.
-- **Flood irrigation** shows the weakest water efficiency.
+Based on the dataset used in the project:
+
+- **Kharif** has the highest average yield and average profit among the three seasons.
+- **Zaid** has the lowest average yield and the only negative average profit of the three seasons.
+- **Kharif** has the highest average rainfall and relatively warm temperatures, while **Zaid** has the highest average temperature.
+- **Kharif** also has the highest average disease/pest risk; **Zaid** has the lowest average disease/pest risk.
+- **Rainfed** has the highest overall average water-efficiency value in this dataset, followed by **Drip**, **Sprinkler**, and **Flood**. This is an observed dataset result and should not be interpreted as a general agricultural rule.
+- Across all irrigation methods, **Flood** has the lowest average water efficiency.
 
 ## 🧰 Technologies Used
 
@@ -67,13 +78,32 @@ Seasonal-Agriculture-Performance-Analysis/
 
 ## ▶️ How to Run
 
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/Dreamer-26/Seasonal-Agriculture-Performance-Analysis.git
 cd Seasonal-Agriculture-Performance-Analysis
+```
+
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-Open `notebooks/Seasonal_Agriculture_Analysis.ipynb` in Jupyter Notebook or JupyterLab and run the cells in order.
+### 3. Open the notebook
+
+Launch Jupyter Notebook or JupyterLab and open:
+
+```text
+notebooks/Seasonal_Agriculture_Analysis.ipynb
+```
+
+The notebook uses the repository-relative dataset path:
+
+```python
+df = pd.read_csv('../data/seasonal_agriculture_performance_dataset.csv')
+```
 
 ## 📌 Project Status
 
@@ -84,3 +114,7 @@ Completed academic data-analysis project prepared for the **VOIS 2026–27** pro
 **Shivayogi Mruthunjaya Urolagin**  
 USN: **1DS23RI047**  
 Dayananda Sagar College Of Engineering
+
+---
+
+*For reproducibility, run the notebook from the `notebooks/` directory or ensure the working directory makes the relative `../data/` path available.*
