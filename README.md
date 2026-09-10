@@ -31,7 +31,7 @@ The dataset contains **4,000 farm-level records** and **28 features** covering:
 - Yield, production, market price, cost, revenue, and profit
 - Water usage, water efficiency, and disease/pest risk
 
-The source dataset is included in `data/` for reproducibility. fileciteturn71file0L2-L6
+The source dataset is included in `data/` for reproducibility.
 
 ## 🔬 Analysis Workflow
 
